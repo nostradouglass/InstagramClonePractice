@@ -7,21 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5713695FD91BDAB5B790C930 /* Pods_InstragramClonePractice.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 359DDC1AB68F19D86134BC0F /* Pods_InstragramClonePractice.framework */; };
 		AC3B6C8720C7145E002F0B17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3B6C8620C7145E002F0B17 /* AppDelegate.swift */; };
-		AC3B6C8920C7145E002F0B17 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3B6C8820C7145E002F0B17 /* ViewController.swift */; };
+		AC3B6C8920C7145E002F0B17 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3B6C8820C7145E002F0B17 /* LoginViewController.swift */; };
 		AC3B6C8C20C7145E002F0B17 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC3B6C8A20C7145E002F0B17 /* Main.storyboard */; };
 		AC3B6C8E20C7145F002F0B17 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC3B6C8D20C7145F002F0B17 /* Assets.xcassets */; };
 		AC3B6C9120C7145F002F0B17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC3B6C8F20C7145F002F0B17 /* LaunchScreen.storyboard */; };
+		AC3B6C9920C718EB002F0B17 /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3B6C9820C718EB002F0B17 /* UsersTableViewController.swift */; };
+		AC3B6C9F20C72565002F0B17 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3B6C9E20C72565002F0B17 /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		359DDC1AB68F19D86134BC0F /* Pods_InstragramClonePractice.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_InstragramClonePractice.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC3B6C8320C7145E002F0B17 /* InstragramClonePractice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InstragramClonePractice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC3B6C8620C7145E002F0B17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AC3B6C8820C7145E002F0B17 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AC3B6C8820C7145E002F0B17 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AC3B6C8B20C7145E002F0B17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC3B6C8D20C7145F002F0B17 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC3B6C9020C7145F002F0B17 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC3B6C9220C7145F002F0B17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC3B6C9820C718EB002F0B17 /* UsersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
+		AC3B6C9E20C72565002F0B17 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		FDF573B8717007E260D3FA75 /* Pods-InstragramClonePractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstragramClonePractice.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstragramClonePractice/Pods-InstragramClonePractice.debug.xcconfig"; sourceTree = "<group>"; };
+		FFA34023766C5FDDEE5C95A3 /* Pods-InstragramClonePractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstragramClonePractice.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstragramClonePractice/Pods-InstragramClonePractice.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5713695FD91BDAB5B790C930 /* Pods_InstragramClonePractice.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		429B640B52D22199602977BE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FDF573B8717007E260D3FA75 /* Pods-InstragramClonePractice.debug.xcconfig */,
+				FFA34023766C5FDDEE5C95A3 /* Pods-InstragramClonePractice.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7DF0249638090535D2E8B01E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				359DDC1AB68F19D86134BC0F /* Pods_InstragramClonePractice.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		AC3B6C7A20C7145E002F0B17 = {
 			isa = PBXGroup;
 			children = (
 				AC3B6C8520C7145E002F0B17 /* InstragramClonePractice */,
 				AC3B6C8420C7145E002F0B17 /* Products */,
+				429B640B52D22199602977BE /* Pods */,
+				7DF0249638090535D2E8B01E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,11 +83,13 @@
 			isa = PBXGroup;
 			children = (
 				AC3B6C8620C7145E002F0B17 /* AppDelegate.swift */,
-				AC3B6C8820C7145E002F0B17 /* ViewController.swift */,
+				AC3B6C8820C7145E002F0B17 /* LoginViewController.swift */,
+				AC3B6C9820C718EB002F0B17 /* UsersTableViewController.swift */,
 				AC3B6C8A20C7145E002F0B17 /* Main.storyboard */,
 				AC3B6C8D20C7145F002F0B17 /* Assets.xcassets */,
 				AC3B6C8F20C7145F002F0B17 /* LaunchScreen.storyboard */,
 				AC3B6C9220C7145F002F0B17 /* Info.plist */,
+				AC3B6C9E20C72565002F0B17 /* SignUpViewController.swift */,
 			);
 			path = InstragramClonePractice;
 			sourceTree = "<group>";
@@ -71,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AC3B6C9520C7145F002F0B17 /* Build configuration list for PBXNativeTarget "InstragramClonePractice" */;
 			buildPhases = (
+				735BBFAD741950187FEB3568 /* [CP] Check Pods Manifest.lock */,
 				AC3B6C7F20C7145E002F0B17 /* Sources */,
 				AC3B6C8020C7145E002F0B17 /* Frameworks */,
 				AC3B6C8120C7145E002F0B17 /* Resources */,
+				287DFCDC2CAACA1C1F61C0C3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -96,6 +128,11 @@
 				TargetAttributes = {
 					AC3B6C8220C7145E002F0B17 = {
 						CreatedOnToolsVersion = 9.4;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -130,13 +167,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		287DFCDC2CAACA1C1F61C0C3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-InstragramClonePractice/Pods-InstragramClonePractice-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/Parse/Parse.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parse.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InstragramClonePractice/Pods-InstragramClonePractice-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		735BBFAD741950187FEB3568 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-InstragramClonePractice-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		AC3B6C7F20C7145E002F0B17 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC3B6C8920C7145E002F0B17 /* ViewController.swift in Sources */,
+				AC3B6C8920C7145E002F0B17 /* LoginViewController.swift in Sources */,
 				AC3B6C8720C7145E002F0B17 /* AppDelegate.swift in Sources */,
+				AC3B6C9F20C72565002F0B17 /* SignUpViewController.swift in Sources */,
+				AC3B6C9920C718EB002F0B17 /* UsersTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +360,7 @@
 		};
 		AC3B6C9620C7145F002F0B17 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDF573B8717007E260D3FA75 /* Pods-InstragramClonePractice.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,7 +370,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kdouglass.InstragramClonePractice;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kdouglass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -296,6 +379,7 @@
 		};
 		AC3B6C9720C7145F002F0B17 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFA34023766C5FDDEE5C95A3 /* Pods-InstragramClonePractice.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -305,7 +389,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.kdouglass.InstragramClonePractice;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kdouglass;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
