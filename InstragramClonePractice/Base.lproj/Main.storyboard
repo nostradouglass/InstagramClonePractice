@@ -19,14 +19,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xgk-4V-mz4">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="a@a.com" borderStyle="roundedRect" placeholder="Email address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xgk-4V-mz4">
                                 <rect key="frame" x="16" y="204" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5mZ-l8-IOE">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="a" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5mZ-l8-IOE">
                                 <rect key="frame" x="16" y="280" width="343" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -129,12 +129,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cx6-NU-MiS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2552.8000000000002" y="1028.6356821589206"/>
+            <point key="canvasLocation" x="1777" y="1736"/>
         </scene>
-        <!--Users Table View Controller-->
+        <!--Feed-->
         <scene sceneID="Ugw-sA-5RS">
             <objects>
-                <tableViewController id="aor-Nb-D2y" customClass="UsersTableViewController" customModule="InstragramClonePractice" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Feed" id="aor-Nb-D2y" customClass="UsersTableViewController" customModule="InstragramClonePractice" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ciL-jq-18C">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -156,7 +156,11 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="zar-Zr-jgc">
                         <leftBarButtonItems>
-                            <barButtonItem title="Post" id="fRh-wr-QHV"/>
+                            <barButtonItem title="Post" id="fRh-wr-QHV">
+                                <connections>
+                                    <segue destination="390-C0-4nc" kind="show" id="OzB-gI-p6L"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem title="Feed" id="oy6-iX-ei5"/>
                         </leftBarButtonItems>
                         <barButtonItem key="rightBarButtonItem" title="Logout" id="ys3-ab-LEp">
@@ -171,7 +175,55 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="syh-pH-qmA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2716" y="117.39130434782609"/>
+            <point key="canvasLocation" x="2486" y="948"/>
+        </scene>
+        <!--Post-->
+        <scene sceneID="mNA-LW-b3d">
+            <objects>
+                <viewController title="Post" id="390-C0-4nc" customClass="PostViewController" customModule="InstragramClonePractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vd0-hr-1o6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5nY-8a-7KN">
+                                <rect key="frame" x="16" y="78" width="343" height="239"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vle-F2-gVw">
+                                <rect key="frame" x="163" y="440" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Submit"/>
+                                <connections>
+                                    <action selector="submitPost:" destination="390-C0-4nc" eventType="touchUpInside" id="gig-bn-ST1"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r4U-4T-jXg">
+                                <rect key="frame" x="128" y="325" width="119" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Choose an image"/>
+                                <connections>
+                                    <action selector="chooseImage:" destination="390-C0-4nc" eventType="touchUpInside" id="9ku-y6-Myb"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="do3-O6-SZ0">
+                                <rect key="frame" x="16" y="383" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="vhU-Pq-hun"/>
+                    </view>
+                    <connections>
+                        <outlet property="postImage" destination="5nY-8a-7KN" id="sfx-LM-SjE"/>
+                        <outlet property="postMessage" destination="do3-O6-SZ0" id="VZB-Rb-hvO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vYh-rr-zBB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3272.8000000000002" y="946.77661169415296"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Kym-32-X8h">
@@ -189,12 +241,11 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Za1-4a-VUZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1776.8" y="117.39130434782609"/>
+            <point key="canvasLocation" x="1714" y="948"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Vxq-nJ-pYE">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3jx-15-95A" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SdG-xc-6V4" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Mqw-i4-U2h">
@@ -206,8 +257,9 @@
                         <segue destination="Ato-yZ-3vc" kind="relationship" relationship="rootViewController" id="WFC-Jo-Hwh"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3jx-15-95A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1700" y="1382"/>
+            <point key="canvasLocation" x="1033" y="1736"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

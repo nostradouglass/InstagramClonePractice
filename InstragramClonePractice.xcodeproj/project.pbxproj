@@ -15,6 +15,8 @@
 		AC3B6C9120C7145F002F0B17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC3B6C8F20C7145F002F0B17 /* LaunchScreen.storyboard */; };
 		AC3B6C9920C718EB002F0B17 /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3B6C9820C718EB002F0B17 /* UsersTableViewController.swift */; };
 		AC3B6C9F20C72565002F0B17 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC3B6C9E20C72565002F0B17 /* SignUpViewController.swift */; };
+		AC6AF13F20C85AC000508887 /* personIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = AC6AF13E20C85AC000508887 /* personIcon.png */; };
+		ACA08E1520C8588700CCC7C7 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA08E1420C8588700CCC7C7 /* PostViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		AC3B6C9220C7145F002F0B17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC3B6C9820C718EB002F0B17 /* UsersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
 		AC3B6C9E20C72565002F0B17 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		AC6AF13E20C85AC000508887 /* personIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = personIcon.png; sourceTree = "<group>"; };
+		ACA08E1420C8588700CCC7C7 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		FDF573B8717007E260D3FA75 /* Pods-InstragramClonePractice.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstragramClonePractice.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InstragramClonePractice/Pods-InstragramClonePractice.debug.xcconfig"; sourceTree = "<group>"; };
 		FFA34023766C5FDDEE5C95A3 /* Pods-InstragramClonePractice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InstragramClonePractice.release.xcconfig"; path = "Pods/Target Support Files/Pods-InstragramClonePractice/Pods-InstragramClonePractice.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -66,6 +70,7 @@
 			children = (
 				AC3B6C8520C7145E002F0B17 /* InstragramClonePractice */,
 				AC3B6C8420C7145E002F0B17 /* Products */,
+				ACA08E1620C85A6A00CCC7C7 /* Resources */,
 				429B640B52D22199602977BE /* Pods */,
 				7DF0249638090535D2E8B01E /* Frameworks */,
 			);
@@ -86,12 +91,21 @@
 				AC3B6C8820C7145E002F0B17 /* LoginViewController.swift */,
 				AC3B6C9820C718EB002F0B17 /* UsersTableViewController.swift */,
 				AC3B6C8A20C7145E002F0B17 /* Main.storyboard */,
-				AC3B6C8D20C7145F002F0B17 /* Assets.xcassets */,
 				AC3B6C8F20C7145F002F0B17 /* LaunchScreen.storyboard */,
 				AC3B6C9220C7145F002F0B17 /* Info.plist */,
 				AC3B6C9E20C72565002F0B17 /* SignUpViewController.swift */,
+				ACA08E1420C8588700CCC7C7 /* PostViewController.swift */,
 			);
 			path = InstragramClonePractice;
+			sourceTree = "<group>";
+		};
+		ACA08E1620C85A6A00CCC7C7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AC6AF13E20C85AC000508887 /* personIcon.png */,
+				AC3B6C8D20C7145F002F0B17 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC3B6C9120C7145F002F0B17 /* LaunchScreen.storyboard in Resources */,
+				AC6AF13F20C85AC000508887 /* personIcon.png in Resources */,
 				AC3B6C8E20C7145F002F0B17 /* Assets.xcassets in Resources */,
 				AC3B6C8C20C7145E002F0B17 /* Main.storyboard in Resources */,
 			);
@@ -219,6 +234,7 @@
 				AC3B6C8720C7145E002F0B17 /* AppDelegate.swift in Sources */,
 				AC3B6C9F20C72565002F0B17 /* SignUpViewController.swift in Sources */,
 				AC3B6C9920C718EB002F0B17 /* UsersTableViewController.swift in Sources */,
+				ACA08E1520C8588700CCC7C7 /* PostViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
