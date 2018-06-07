@@ -10,7 +10,7 @@ import UIKit
 import Parse
 import SVProgressHUD
 
-class PostViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class PostViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate {
 
 	@IBOutlet weak var postImage: UIImageView!
 	@IBOutlet weak var postMessage: UITextField!
@@ -19,12 +19,29 @@ class PostViewController: UIViewController, UINavigationControllerDelegate, UIIm
     override func viewDidLoad() {
         super.viewDidLoad()
 
+		postMessage.delegate = self
+		
 		postImage.image = UIImage(named: "personIcon.png")
 	
 		
         // Do any additional setup after loading the view.
     }
 
+	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+		self.view.endEditing(true)
+	}
+	
+	// add UITextFieldDelegate to class then:
+	// Close keyboard when return key is pressed
+	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+		
+		postMessage.resignFirstResponder()
+		
+		return true
+		
+	}
+	
+	
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

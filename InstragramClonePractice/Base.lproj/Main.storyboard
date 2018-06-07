@@ -161,7 +161,11 @@
                                     <segue destination="390-C0-4nc" kind="show" id="OzB-gI-p6L"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem title="Feed" id="oy6-iX-ei5"/>
+                            <barButtonItem title="Feed" id="oy6-iX-ei5">
+                                <connections>
+                                    <segue destination="UEo-8g-KUT" kind="show" id="IA9-vs-YlK"/>
+                                </connections>
+                            </barButtonItem>
                         </leftBarButtonItems>
                         <barButtonItem key="rightBarButtonItem" title="Logout" id="ys3-ab-LEp">
                             <connections>
@@ -176,6 +180,59 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="syh-pH-qmA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2486" y="948"/>
+        </scene>
+        <!--Feed Table View Controller-->
+        <scene sceneID="xjY-Mp-1aQ">
+            <objects>
+                <tableViewController id="UEo-8g-KUT" customClass="FeedTableViewController" customModule="InstragramClonePractice" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="284" estimatedRowHeight="284" sectionHeaderHeight="28" sectionFooterHeight="28" id="nbU-V3-LHO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="284" id="cZq-J6-7Uu" customClass="FeedTableViewCell" customModule="InstragramClonePractice" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="284"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cZq-J6-7Uu" id="WxL-oq-Wkp" customClass="Feed">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="283.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fJK-h3-5DH">
+                                            <rect key="frame" x="67" y="11" width="240" height="200"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Message" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ut7-zf-0C2">
+                                            <rect key="frame" x="16" y="248" width="343" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aW8-aj-E4p">
+                                            <rect key="frame" x="16" y="219" width="343" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="messageLabel" destination="Ut7-zf-0C2" id="XbI-Ld-P3m"/>
+                                    <outlet property="postedImage" destination="fJK-h3-5DH" id="gQA-AH-NPm"/>
+                                    <outlet property="usernameLabel" destination="aW8-aj-E4p" id="hGL-ai-v30"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="UEo-8g-KUT" id="QHn-Nv-JAN"/>
+                            <outlet property="delegate" destination="UEo-8g-KUT" id="puR-xO-T9h"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="10n-Hy-6vT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3269.5999999999999" y="696.7016491754124"/>
         </scene>
         <!--Post-->
         <scene sceneID="mNA-LW-b3d">
@@ -223,7 +280,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vYh-rr-zBB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3272.8000000000002" y="946.77661169415296"/>
+            <point key="canvasLocation" x="3276" y="1443"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Kym-32-X8h">

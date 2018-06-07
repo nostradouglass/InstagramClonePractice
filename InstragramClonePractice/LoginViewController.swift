@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
 	
 	@IBOutlet weak var emailTextField: UITextField!
@@ -20,6 +20,9 @@ class LoginViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		emailTextField.delegate = self
+		passwordTextField.delegate = self
+		
 			self.navigationController?.navigationBar.isHidden = true
 		// Do any additional setup after loading the view, typically from a nib.
 	}
@@ -29,7 +32,15 @@ class LoginViewController: UIViewController {
 		// Dispose of any resources that can be recreated.
 	}
 
+	  override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+		self.view.endEditing(true)
+	}
 	
+	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+		emailTextField.resignFirstResponder()
+		passwordTextField.resignFirstResponder()
+		return true
+	}
 	
 	
 	@IBAction func loginPressed(_ sender: UIButton) {

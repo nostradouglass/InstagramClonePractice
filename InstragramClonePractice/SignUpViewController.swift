@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class SignUpViewController: UIViewController {
+class SignUpViewController: UIViewController, UITextFieldDelegate {
 
 	@IBOutlet weak var emailText: UITextField!
 	@IBOutlet weak var passwordText: UITextField!
@@ -18,9 +18,30 @@ class SignUpViewController: UIViewController {
 	override func viewDidLoad() {
         super.viewDidLoad()
 
+		emailText.delegate = self
+		passwordText.delegate = self
+		ageText.delegate = self
+		
         // Do any additional setup after loading the view.
     }
 
+	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+		self.view.endEditing(true)
+	}
+	
+	// add UITextFieldDelegate to class then:
+	// Close keyboard when return key is pressed
+	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+		
+		emailText.resignFirstResponder()
+		passwordText.resignFirstResponder()
+		ageText.resignFirstResponder()
+		
+		return true
+		
+	}
+	
+	
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
