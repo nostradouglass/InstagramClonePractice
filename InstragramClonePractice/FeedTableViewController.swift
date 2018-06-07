@@ -12,9 +12,9 @@ import Parse
 class FeedTableViewController: UITableViewController {
 
 	var users = [String: String]()
-	var messages = ["message1", "message2"]
-	var usernames = ["name", "name2"]
-	
+	var messages = [String]()
+	var usernames = [String]()
+	var imageFiles = [PFFile]()
 	
 	
     override func viewDidLoad() {
@@ -35,27 +35,54 @@ class FeedTableViewController: UITableViewController {
 					}
 				}
 				
-//				let getFollowedUsersQuery = PFQuery(className: "Followers")
-//				getFollowedUsersQuery.whereKey("follower", equalTo: (PFUser.current()?.objectId!)!)
-//				getFollowedUsersQuery.findObjectsInBackground(block: { (objects, error) in
-//					if error != nil {
-//						print(error!)
-//					}
-//
-//					if let followers = objects {
-//						for follower in followers {
-//
-//							let followedUser = follower["following"] as! String
-//
-//
-//						}
-//					}
-//				})
+				let getFollowedUsersQuery = PFQuery(className: "Followers")
+				getFollowedUsersQuery.whereKey("follower", equalTo: (PFUser.current()?.objectId!)!)
+				getFollowedUsersQuery.findObjectsInBackground(block: { (objects, error) in
+					if error != nil {
+						print(error!)
+					}
+
+					if let followers = objects {
+						for follower in followers {
+
+							let followedUser = follower["following"] as! String
+
+							let query = PFQuery(className: "Posts")
+							
+							query.whereKey("userId", equalTo: followedUser)
+							
+							query.findObjectsInBackground(block: { (objects, error) in
+								
+								if error != nil {
+									print(error!)
+								}
+								
+								if let posts = objects {
+									
+									for object in posts {
+										
+										let post = object as PFObject
+										
+										self.messages.append((post["message"] as? String)!)
+										
+										self.imageFiles.append((post["imageFile"] as? PFFile)!)
+										
+										self.usernames.append((post["userId"] as? String)!)
+										
+										self.tableView.reloadData()
+
+									}
+								}
+								
+							})
+						}
+					}
+				})
 				
 			}
 		})
 	}
-
+	
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
