@@ -31,13 +31,14 @@ class PostViewController: UIViewController, UINavigationControllerDelegate, UIIm
     }
 	
 	func createAlert(title: String, message: String) {
-		let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
-	
+		
+		let alert = UIAlertController(title: title, message:  message, preferredStyle: UIAlertControllerStyle.alert)
+		
 		alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
 			alert.dismiss(animated: true, completion: nil)
 		}))
 		
-		alert.present(alert, animated: true, completion: nil)
+		present(alert, animated: true, completion: nil)
 		
 	}
 	
@@ -77,9 +78,9 @@ class PostViewController: UIViewController, UINavigationControllerDelegate, UIIm
 			
 			if error != nil {
 				print(error as Any)
-				//self.createAlert(title: "Error", message: "There was an error posting your image")
+				self.createAlert(title: "Error", message: "There was an error posting your image")
 			} else {
-				//self.createAlert(title: "Success", message: "Your image was posted")
+				self.createAlert(title: "Success", message: "Your image was posted")
 				self.postImage.image = UIImage(named: "personIcon.png")
 				self.postMessage.text = ""
 			}
